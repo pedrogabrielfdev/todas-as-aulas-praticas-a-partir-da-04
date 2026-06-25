@@ -17,7 +17,7 @@ public class teste {
             System.out.print("Escolha uma opção: ");
 
             opcao = ler.nextInt();
-            ler.nextLine(); // Limpar 
+            ler.nextLine(); 
 
             switch (opcao) {
                 case 1:
@@ -27,13 +27,13 @@ public class teste {
                     String cpfGerente = ler.nextLine();
                     System.out.println("Digite o salário base:");
                     double salarioGerente = ler.nextDouble();
-                    ler.nextLine(); // Limpar
+                    ler.nextLine();
                     System.out.println("Digite a data de nascimento:");
                     String dataNascimentoGerente = ler.nextLine();
                     Gerente gerente = new Gerente(nomeGerente, cpfGerente, salarioGerente, dataNascimentoGerente);
                     listaFuncionarios.add(gerente);
                     System.out.println("Gerente cadastrado com sucesso!");
-                    break; // <-- ADICIONADO AQUI! Diz para o programa sair do switch.
+                    break; 
 
                 case 2:
                     System.out.println("Digite o nome do atendente:");
@@ -42,23 +42,23 @@ public class teste {
                     String cpfAtendente = ler.nextLine();
                     System.out.println("Digite o salário base:");
                     double salarioAtendente = ler.nextDouble();
-                    ler.nextLine(); // Limpar
+                    ler.nextLine();
                     System.out.println("Digite a data de nascimento:");
                     String dataNascimentoAtendente = ler.nextLine();
                     System.out.println("Digite a comissão:");
                     double comissaoAtendente = ler.nextDouble();
-                    ler.nextLine(); // Limpar
+                    ler.nextLine(); 
                     Atendente atendente = new Atendente(nomeAtendente, cpfAtendente, salarioAtendente, dataNascimentoAtendente, comissaoAtendente);
                     listaFuncionarios.add(atendente);
                     System.out.println("Atendente cadastrado com sucesso!");
-                    break; // <-- ADICIONADO AQUI!
+                    break; 
 
                 case 3:
                     System.out.println("Lista de Funcionários:");
                     for (Funcionario f : listaFuncionarios) {
                         System.out.println("Nome: " + f.getNome() + ", CPF: " + f.getCpf());
                     }
-                    break; // <-- ADICIONADO AQUI!
+                    break; 
 
                 case 4:
                     System.out.println("Digite o CPF do funcionario: ");
@@ -68,21 +68,21 @@ public class teste {
                         if (f.getCpf().equals(cpfBusca)) {
                             System.out.println("Salário de " + f.getNome() + ": R$" + f.getSalario());
                             encontrado = true;
-                            break; // Esse break é para o loop 'for', parando a busca assim que encontrar.
+                            break; 
                         }
                     }
                     if (!encontrado) {
                         System.out.println("Funcionario nao encontrado.");
                     }
-                    break; // Esse já estava correto no seu código!
+                    break; 
 
                 case 5:
                     System.out.println("Saindo...");
-                    break; // Esse já estava correto!
+                    break; 
 
                 default:
                     System.out.println("!1!1!Essa opção não existe!1!1!");
-                    // O default não exige break, pois já é a última opção do switch.
+                   
             }
         }
         
